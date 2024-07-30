@@ -1,89 +1,71 @@
-Here’s a draft for your `README.md` file for the project hosted at the GitHub repository [Assembler-C](https://github.com/Shay-Gabison/Assembler-C.git):
-
-```markdown
 # Assembler-C
 
-Assembler-C is a project that implements a basic assembler for a simple assembly language. The assembler translates assembly code into machine code, which can then be executed by a simulated processor.
+Assembler-C is a project that provides an implementation of an assembler for a hypothetical assembly language, written in C. This project was developed in collaboration with a fellow student as part of a data science workshop.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Assembler-C is a tool designed to convert assembly language source code into machine code. The project aims to provide a clear understanding of the process of assembly, parsing, and code generation. This implementation was created to facilitate learning and experimentation with assembler concepts.
 
 ## Features
 
-- **Assembly Code Parsing:** Parses assembly language instructions and operands.
-- **Machine Code Generation:** Converts parsed assembly instructions into machine code.
-- **Error Handling:** Detects and reports syntax errors and other issues in assembly code.
-- **Output Files:** Generates object files that contain the machine code.
+- **Assembly Code Parsing**: Parses assembly language instructions and labels.
+- **Symbol Table Management**: Maintains and resolves labels and symbols.
+- **Code Generation**: Translates assembly instructions into machine code.
+- **Error Handling**: Detects and reports errors in assembly code.
 
 ## Installation
 
-To use Assembler-C, you need to have a C compiler installed on your system. You can use any standard C compiler like `gcc`.
+To run Assembler-C, you'll need to have a C compiler installed. Follow these steps to set up the project:
 
-### Clone the Repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shay-Gabison/Assembler-C.git
+   ```
 
-```bash
-git clone https://github.com/Shay-Gabison/Assembler-C.git
-cd Assembler-C
-```
+2. Navigate to the project directory:
+   ```bash
+   cd Assembler-C
+   ```
 
-### Build the Project
-
-```bash
-make
-```
-
-This command will compile the source code and generate the executable.
+3. Compile the code:
+   ```bash
+   gcc -o assembler assembler.c
+   ```
 
 ## Usage
 
-To assemble a file, run the following command:
+To use Assembler-C, provide the assembler source file as an argument to the executable:
 
 ```bash
-./assembler input.asm output.o
+./assembler source.asm
 ```
 
-- `input.asm` is the assembly source file you want to assemble.
-- `output.o` is the output object file that will be generated.
+The assembler will generate an output file with the machine code.
 
-## File Structure
+## Examples
 
-- `src/`: Contains the source code files for the assembler.
-- `include/`: Contains header files.
-- `test/`: Contains test assembly files and scripts.
-- `Makefile`: The Makefile for building the project.
-- `README.md`: This documentation file.
+Here are some example assembly source files and their corresponding outputs:
 
-## Example
-
-Here is an example of an assembly file `example.asm`:
-
-```assembly
-MOV R1, #5
-ADD R1, R2
-```
-
-After assembling with:
-
-```bash
-./assembler example.asm example.o
-```
-
-The `example.o` file will be generated, containing the corresponding machine code.
+- **Example 1**: A simple program that adds two numbers.
+- **Example 2**: A program that demonstrates label usage and jumps.
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request. For significant changes, please open an issue first to discuss what you would like to change.
+This project was developed in collaboration with a fellow student as part of a data science workshop. Contributions to the project are welcome. Please follow these guidelines:
 
-## License
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Create a pull request.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [Assembler language resources](https://example.com)
-- [C programming tutorials](https://example.com)
-
-## Contact
-
-For any questions or comments, please contact [Shay Gabison](mailto:shaygabison@example.com).
-
-```
-
-Feel free to modify or expand this as needed to fit your project specifics or preferences!
